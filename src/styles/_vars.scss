@@ -1,0 +1,36 @@
+$vars: (
+  font-family-segoe-ui: "'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+  base-font-size: 16px,
+  dark-0: #000000,
+  dark-1: #09011c,
+  dark-2: #1e1830,
+  dark-3: #3d364c,
+  dark-4: #494949,
+  dark-5: #534d61,
+  grey-0: #5a5567,
+  grey-1: #696475,
+  grey-2: #787382,
+  grey-3: #868390,
+  grey-4: #95929d,
+  grey-5: #a4a1ab,
+  light-0: #cfcfd4,
+  light-1: #e5e5e7,
+  light-2: #ececee,
+  light-3: #f2f2f3,
+  light-4: #f9f9f9,
+  light-5: #ffffff,
+  mobile-portrait-0: 320px,
+  mobile-portrait-1: 375px,
+  mobile-portrait-2: 425px,
+  tablet-portrait-0: 768px,
+  desktop-0: 1024px,
+  desktop-1: 1280px,
+  desktop-2: 1440px,
+  elastic-ease-in-out: cubic-bezier(0.75, -0.5, 0, 1.75),
+);
+
+:root {
+  @each $name, $value in $vars {
+    --#{$name}: #{$value};
+  }
+}

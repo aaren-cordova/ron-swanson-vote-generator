@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './Header';
+import {useState, useEffect} from 'react';
+import Storages from 'js-storage';
+
+const storageNamespace = Storages.initNamespaceStorage('ron-swanson-quote-generator');
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [quoteCollection, setQuoteCollection] = useState([]);
+    console.log(storageNamespace)
+    useEffect(() => {
+        (async () => {
+
+        })();
+    });
+
+    return (
+        <div className="App">
+            <Header numVotes={3}/>
+        </div>
+    );
 }
 
 export default App;

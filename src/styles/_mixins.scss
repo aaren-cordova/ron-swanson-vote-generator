@@ -1,0 +1,68 @@
+@import 'vars';
+@mixin var($property, $varName) {
+  #{$property}: map-get($vars, $varName);
+  #{$property}: var(--#{$varName});
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($size-value: 16) {
+  $size-value: strip-unit($size-value);
+  @return ($size-value / strip-unit($base-font-size)) + rem;
+}
+
+@mixin base-text-content {
+  font-family: $font-family-heebo;
+  font-style: normal;
+  font-weight: normal;
+  color: $dark-3;
+}
+
+@mixin text-content-1 {
+  @include base-text-content;
+  font-size: rem(21px);
+  line-height: rem(31px);
+}
+
+@mixin text-content-2 {
+  @include base-text-content;
+  font-size: rem(16px);
+  line-height: rem(26px);
+  letter-spacing: rem(0.35px);
+}
+
+@mixin text-content-3 {
+  @include base-text-content;
+  font-weight: 500;
+  font-size: rem(16px);
+  line-height: rem(23px);
+  letter-spacing: rem(0.1px);
+}
+
+@mixin text-content-4 {
+  @include base-text-content;
+  font-weight: 300;
+  font-size: rem(16px);
+  line-height: rem(23px);
+}
+
+@mixin text-content-5 {
+  @include base-text-content;
+  font-size: rem(14px);
+  line-height: rem(21px);
+  letter-spacing: rem(0.1px);
+}
+
+@mixin text-content-6 {
+  @include base-text-content;
+  font-weight: 300;
+  font-size: rem(14px);
+  line-height: rem(21px);
+  letter-spacing: rem(0.2px);
+}
