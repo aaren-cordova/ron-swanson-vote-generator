@@ -1,12 +1,27 @@
+@import 'styles/module';
+
 .Header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.Header__section {
+  display: flex;
+  flex-direction: row;
+}
+
+.Header__section:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
 }
 
 .Header__title {
-    font-weight: 700;
+  font-weight: 700;
+  margin-right: rem(8px);
 }
 
 .Header__subtitle {
-
-
 }

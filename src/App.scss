@@ -1,39 +1,52 @@
 @import 'styles/module';
 
-body {
-    @include var(background-color, light-5);
+:root {
+  @include text-content-4;
 }
 
 .App {
-    color: #707070;
-    text-align: center;
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-size: 24px;
-    line-height: 32px;
-    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  width: 100vw;
+  min-height: 100vh;
+
+  &.theme--light {
+    @include var(background-color, light-5);
+    @include var(color, grey-2);
+  }
+
+  &.theme--dark {
+    @include var(background-color, dark-0);
+    @include var(color, grey-2);
+  }
 }
 
-/*font-weight: italic;*/
-/*font-size: 20px;*/
-/*line-height: 27px;*/
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+h1 {
+  @include text-content-1;
 }
 
-.App-link {
-    color: #61dafb;
+h2 {
+  @include text-content-2;
+}
+
+h3 {
+  @include text-content-3;
+}
+
+h4 {
+  @include text-content-4;
+}
+
+h5 {
+  @include text-content-5;
+}
+
+h6 {
+  @include text-content-6;
 }
