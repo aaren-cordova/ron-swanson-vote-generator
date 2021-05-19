@@ -27,10 +27,7 @@ $vars: (
   desktop-1: 1280px,
   desktop-2: 1440px,
   elastic-ease-in-out: cubic-bezier(0.75, -0.5, 0, 1.75),
+  primary-background-color: #ffffff,
+  primary-text-color: #707070,
+  primary-border-color: #ffffff,
 );
-
-:root {
-  @each $name, $value in $vars {
-    --#{$name}: #{$value};
-  }
-}

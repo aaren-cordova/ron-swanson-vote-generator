@@ -5,6 +5,10 @@
   #{$property}: var(--#{$varName});
 }
 
+@mixin set-var($varName, $valueName) {
+  --#{$varName}: #{map-get($vars, $valueName)};
+}
+
 @function get-var($varName){
   @return map-get($vars, $varName);
 }
@@ -26,7 +30,7 @@
   font-style: normal;
   font-weight: normal;
   @include var(font-family, font-family-segoe-ui);
-  @include var(color, grey-2);
+  @include var(color, primary-text-color);
 }
 
 @mixin text-content-1 {

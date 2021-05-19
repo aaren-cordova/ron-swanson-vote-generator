@@ -1,0 +1,13 @@
+@import 'styles/module';
+
+.TotalQuotesInputNumber {
+
+}
+
+.TotalQuotesInputNumber__label {
+  margin-right: rem(8px);
+
+  &:first-child::after {
+    content: ":";
+  }
+}

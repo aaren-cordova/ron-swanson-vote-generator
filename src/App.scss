@@ -1,8 +1,14 @@
 @import 'styles/module';
+@import '~normalize.css';
 
 :root {
   @include text-content-4;
+
+  @each $name, $value in $vars {
+    --#{$name}: #{$value};
+  }
 }
+
 
 .App {
   text-align: center;
@@ -16,37 +22,42 @@
   width: 100vw;
   min-height: 100vh;
 
+  @include var(background-color, primary-background-color);
+  @include var(color, primary-text-color);
+
   &.theme--light {
-    @include var(background-color, light-5);
-    @include var(color, grey-2);
+    @include set-var(primary-background-color, light-5);
+    @include set-var(primary-text-color, grey-2);
+    @include set-var(primary-border-color, light-5);
   }
 
   &.theme--dark {
-    @include var(background-color, dark-0);
-    @include var(color, grey-2);
+    @include set-var(primary-background-color, dark-0);
+    @include set-var(primary-text-color, grey-2);
+    @include set-var(primary-border-color, dark-0);
   }
-}
 
-h1 {
-  @include text-content-1;
-}
+  h1 {
+    @include text-content-1;
+  }
 
-h2 {
-  @include text-content-2;
-}
+  h2 {
+    @include text-content-2;
+  }
 
-h3 {
-  @include text-content-3;
-}
+  h3 {
+    @include text-content-3;
+  }
 
-h4 {
-  @include text-content-4;
-}
+  h4 {
+    @include text-content-4;
+  }
 
-h5 {
-  @include text-content-5;
-}
+  h5 {
+    @include text-content-5;
+  }
 
-h6 {
-  @include text-content-6;
+  h6 {
+    @include text-content-6;
+  }
 }
