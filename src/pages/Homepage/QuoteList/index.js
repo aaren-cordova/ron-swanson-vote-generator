@@ -3,6 +3,7 @@ import './styles.scss';
 import {List} from 'antd';
 import {QuestionCircleOutlined} from '@ant-design/icons';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const LOCALE = {
     emptyText:
@@ -11,6 +12,13 @@ const LOCALE = {
             <h3>No Items Found</h3>
         </>,
 };
+
+QuoteList.propTypes = {
+    className: PropTypes.string,
+    quotes: PropTypes.array.isRequired,
+    currentVote: PropTypes.object.isRequired,
+    setCurrentVote: PropTypes.func.isRequired,
+};
 export default function QuoteList({className, quotes, currentVote, setCurrentVote}) {
     return (
         <List
@@ -18,13 +26,13 @@ export default function QuoteList({className, quotes, currentVote, setCurrentVot
             bordered
             dataSource={quotes}
             locale={LOCALE}
-            renderItem={({label, value, yesVotes, noVotes}) => (
+            renderItem={({label, value, numYesVotes, numNoVotes}) => (
                 <QuoteListItem
                     value={value}
                     label={label}
                     currentVote={currentVote}
-                    yesVotes={yesVotes}
-                    noVotes={noVotes}
+                    numYesVotes={numYesVotes}
+                    numNoVotes={numNoVotes}
                     setCurrentVote={setCurrentVote}
                     key={value}
                 />

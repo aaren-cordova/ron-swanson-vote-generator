@@ -1,7 +1,6 @@
-export const UNSUBMITTED_VOTE = 0;
-export const NO_VOTE = 1;
-export const YES_VOTE = 2;
-
+export const UNDEFINED_VOTE = 'undefined_vote';
+export const NO_VOTE = 'no_vote';
+export const YES_VOTE = 'yes_vote';
 export const UNSENT = 'unsent';
 export const STARTED = 'started';
 export const ERROR = 'error';

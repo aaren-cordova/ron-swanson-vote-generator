@@ -1,6 +1,13 @@
 import {InputNumber} from 'antd';
 import classNames from 'classnames';
 import './styles.scss';
+import PropTypes from 'prop-types';
+
+TotalQuotesInputNumber.propTypes = {
+    className: PropTypes.string,
+    totalQuotes: PropTypes.number.isRequired,
+    setTotalQuotes: PropTypes.func.isRequired,
+};
 
 export default function TotalQuotesInputNumber({className, totalQuotes, setTotalQuotes}) {
     function handleTotalQuotesChange(totalQuotes) {

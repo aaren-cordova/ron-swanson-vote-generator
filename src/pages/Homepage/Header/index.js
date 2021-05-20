@@ -4,21 +4,36 @@ import ThemeFieldset from './ThemeFieldset';
 import QuoteSelect from './QuoteSelect';
 import TotalQuotesInputNumber from './TotalQuotesInputNumber';
 import {useMemo} from 'react';
+import PropTypes from 'prop-types';
+
+Header.propTypes = {
+    className: PropTypes.string,
+    quotes: PropTypes.array.isRequired,
+    filteredQuotes: PropTypes.array.isRequired,
+    setSearchTerm: PropTypes.func.isRequired,
+    setTheme: PropTypes.func.isRequired,
+    setTotalQuotes: PropTypes.func.isRequired,
+    theme: PropTypes.string.isRequired,
+    totalQuotes: PropTypes.number.isRequired,
+    setCurrentVote: PropTypes.func.isRequired,
+};
 
 export default function Header(
     {
         className,
         quotes,
+        filteredQuotes,
         theme,
         setTheme,
         totalQuotes,
+        setCurrentVote,
         setTotalQuotes,
         setSearchTerm,
     },
 ) {
-    const totalVotes = useMemo(() => quotes.reduce((accumulator, {yesVotes, noVotes}) => {
-        return accumulator + yesVotes + noVotes;
-    }, 0), [quotes]);
+    const totalVotes = useMemo(() => filteredQuotes.reduce((accumulator, {numYesVotes, numNoVotes}) => {
+        return accumulator + numYesVotes + numNoVotes;
+    }, 0), [filteredQuotes]);
 
     return (
         <header className={classNames('Header', className)}>
@@ -40,6 +55,7 @@ export default function Header(
                 <QuoteSelect
                     quotes={quotes}
                     setSearchTerm={setSearchTerm}
+                    setCurrentVote={setCurrentVote}
                 />
 
                 <span className="Header__votes">Total Votes: {totalVotes}</span>

@@ -1,0 +1,11 @@
+@import 'styles/module';
+
+.Homepage__errorContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: rem(18 ppx);
+}
+
+.Homepage__errorIcon {
+  font-size: rem(100 ppx);
+}
