@@ -1,0 +1,38 @@
+@import 'styles/module';
+@import 'styles/normalize';
+
+:root {
+  @include text-content-4;
+
+  @each $name, $value in $vars {
+    --#{$name}: #{$value};
+  }
+}
+
+.App {
+  text-align: center;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  width: 100vw;
+  min-height: 100vh;
+
+  @include var(background-color, primary-background-color);
+  @include var(color, primary-text-color);
+
+  &.theme--light {
+    @include set-var(primary-background-color, light-5);
+    @include set-var(primary-text-color, grey-2);
+    @include set-var(primary-border-color, light-5);
+  }
+
+  &.theme--dark {
+    @include set-var(primary-background-color, dark-0);
+    @include set-var(primary-text-color, grey-2);
+    @include set-var(primary-border-color, dark-0);
+  }
+}
