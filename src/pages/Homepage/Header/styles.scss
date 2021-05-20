@@ -1,0 +1,63 @@
+@import 'styles/module';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(8px) rem(24px) rem(8px) rem(16px);
+  flex-direction: column;
+
+  @include tablet-portrait-0-and-up {
+    flex-direction: row;
+  }
+
+  .TotalQuotesInputNumber {
+    margin-bottom: 10px;
+
+    @include tablet-portrait-0-and-up {
+      width: rem(190px);
+      margin-bottom: 0;
+    }
+  }
+
+  .ThemeFieldset {
+    margin-bottom: 10px;
+    @include tablet-portrait-0-and-up {
+      width: rem(190px);
+      margin-bottom: 0;
+    }
+  }
+
+  .ant-select.QuoteSelect {
+    margin-bottom: 10px;
+    @include tablet-portrait-0-and-up {
+      max-width: rem(200px);
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.Header__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Header__section:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include tablet-portrait-0-and-up {
+    max-width: rem(688px);
+  }
+}
+
+.Header__title {
+  font-weight: 700;
+  margin-right: rem(8px);
+}
+
+.Header__subtitle {
+}

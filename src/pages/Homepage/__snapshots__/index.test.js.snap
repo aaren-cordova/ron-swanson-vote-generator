@@ -1,0 +1,1095 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@className="my-class-name" matches the snapshot 1`] = `
+<article
+  className="Homepage my-class-name"
+>
+  <main>
+    <div
+      className="ant-list ant-list-split ant-list-bordered QuoteList"
+    >
+      <div
+        className="ant-spin-nested-loading"
+      >
+        <div
+          className="ant-spin-container"
+        >
+          <div
+            className="ant-list-empty-text"
+          >
+            <span
+              aria-label="question-circle"
+              className="anticon anticon-question-circle"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="question-circle"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                />
+              </svg>
+            </span>
+            <h3>
+              No Items Found
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</article>
+`;
+
+exports[`@error="Some Error" matches the snapshot 1`] = `
+<article
+  className="Homepage"
+>
+  <header
+    className="Header"
+  >
+    <section
+      className="Header__section"
+    >
+      <h3
+        className="Header__title"
+      >
+        Ron Swanson Voter
+      </h3>
+      <h4
+        className="Header__subtitle"
+      >
+        "Vote for your favorite quote!"
+      </h4>
+    </section>
+    <section
+      className="Header__section"
+    >
+      <div
+        className="TotalQuotesInputNumber"
+      >
+        <label
+          className="TotalQuotesInputNumber__label"
+          htmlFor="total-quotes-input-number"
+        >
+          Total Quotes
+        </label>
+        <div
+          className="ant-input-number ant-input-number-sm"
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        >
+          <div
+            className="ant-input-number-handler-wrap"
+          >
+            <span
+              aria-disabled={false}
+              aria-label="Increase Value"
+              className="ant-input-number-handler ant-input-number-handler-up"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="up"
+                className="anticon anticon-up ant-input-number-handler-up-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="up"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled={false}
+              aria-label="Decrease Value"
+              className="ant-input-number-handler ant-input-number-handler-down"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="down"
+                className="anticon anticon-down ant-input-number-handler-down-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="down"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="ant-input-number-input-wrap"
+          >
+            <input
+              aria-valuemax={100}
+              aria-valuemin={2}
+              aria-valuenow="9"
+              autoComplete="off"
+              className="ant-input-number-input"
+              id="total-quotes-input-number"
+              onChange={[Function]}
+              role="spinbutton"
+              step={1}
+              value="9"
+            />
+          </div>
+        </div>
+      </div>
+      <fieldset
+        className="ThemeFieldset"
+      >
+        <label
+          className="ThemeFieldset__label"
+        >
+          Theme
+        </label>
+        <div
+          className="ant-radio-group ant-radio-group-outline"
+        >
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-light-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="light"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-light-input"
+          >
+            Light
+          </label>
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-dark-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="dark"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-dark-input"
+          >
+            Dark
+          </label>
+        </div>
+      </fieldset>
+      <div
+        className="ant-select ant-select-sm QuoteSelect ant-select-single ant-select-allow-clear ant-select-show-arrow ant-select-disabled ant-select-show-search"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+      >
+        <div
+          className="ant-select-selector"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+        >
+          <span
+            className="ant-select-selection-search"
+          >
+            <input
+              aria-activedescendant="undefined_list_0"
+              aria-autocomplete="list"
+              aria-controls="undefined_list"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-owns="undefined_list"
+              autoComplete="off"
+              className="ant-select-selection-search-input"
+              disabled={true}
+              onChange={[Function]}
+              onCompositionEnd={[Function]}
+              onCompositionStart={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onPaste={[Function]}
+              readOnly={false}
+              role="combobox"
+              style={
+                Object {
+                  "opacity": null,
+                }
+              }
+              type="search"
+              unselectable={null}
+              value=""
+            />
+          </span>
+          <span
+            className="ant-select-selection-placeholder"
+          >
+            Select a quote
+          </span>
+        </div>
+        <span
+          aria-hidden={true}
+          className="ant-select-arrow"
+          onMouseDown={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="on"
+        >
+          <span
+            aria-label="down"
+            className="anticon anticon-down ant-select-suffix"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="down"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <span
+        className="Header__votes"
+      >
+        Total Votes: 
+        0
+      </span>
+    </section>
+  </header>
+  <main>
+    <article
+      className="Homepage__errorContainer"
+    >
+      <span
+        aria-label="exclamation-circle"
+        className="anticon anticon-exclamation-circle Homepage__errorIcon"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          data-icon="exclamation-circle"
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          viewBox="64 64 896 896"
+          width="1em"
+        >
+          <path
+            d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+          />
+          <path
+            d="M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
+          />
+        </svg>
+      </span>
+      <details>
+        <summary>
+          An error has occurred
+        </summary>
+        <p>
+          Some Error
+        </p>
+      </details>
+    </article>
+  </main>
+</article>
+`;
+
+exports[`@error={message: "Some Error"} matches the snapshot 1`] = `
+<article
+  className="Homepage"
+>
+  <header
+    className="Header"
+  >
+    <section
+      className="Header__section"
+    >
+      <h3
+        className="Header__title"
+      >
+        Ron Swanson Voter
+      </h3>
+      <h4
+        className="Header__subtitle"
+      >
+        "Vote for your favorite quote!"
+      </h4>
+    </section>
+    <section
+      className="Header__section"
+    >
+      <div
+        className="TotalQuotesInputNumber"
+      >
+        <label
+          className="TotalQuotesInputNumber__label"
+          htmlFor="total-quotes-input-number"
+        >
+          Total Quotes
+        </label>
+        <div
+          className="ant-input-number ant-input-number-sm"
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        >
+          <div
+            className="ant-input-number-handler-wrap"
+          >
+            <span
+              aria-disabled={false}
+              aria-label="Increase Value"
+              className="ant-input-number-handler ant-input-number-handler-up"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="up"
+                className="anticon anticon-up ant-input-number-handler-up-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="up"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled={false}
+              aria-label="Decrease Value"
+              className="ant-input-number-handler ant-input-number-handler-down"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="down"
+                className="anticon anticon-down ant-input-number-handler-down-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="down"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="ant-input-number-input-wrap"
+          >
+            <input
+              aria-valuemax={100}
+              aria-valuemin={2}
+              aria-valuenow="9"
+              autoComplete="off"
+              className="ant-input-number-input"
+              id="total-quotes-input-number"
+              onChange={[Function]}
+              role="spinbutton"
+              step={1}
+              value="9"
+            />
+          </div>
+        </div>
+      </div>
+      <fieldset
+        className="ThemeFieldset"
+      >
+        <label
+          className="ThemeFieldset__label"
+        >
+          Theme
+        </label>
+        <div
+          className="ant-radio-group ant-radio-group-outline"
+        >
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-light-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="light"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-light-input"
+          >
+            Light
+          </label>
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-dark-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="dark"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-dark-input"
+          >
+            Dark
+          </label>
+        </div>
+      </fieldset>
+      <div
+        className="ant-select ant-select-sm QuoteSelect ant-select-single ant-select-allow-clear ant-select-show-arrow ant-select-disabled ant-select-show-search"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+      >
+        <div
+          className="ant-select-selector"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+        >
+          <span
+            className="ant-select-selection-search"
+          >
+            <input
+              aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
+              aria-autocomplete="list"
+              aria-controls="rc_select_TEST_OR_SSR_list"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-owns="rc_select_TEST_OR_SSR_list"
+              autoComplete="off"
+              className="ant-select-selection-search-input"
+              disabled={true}
+              id="rc_select_TEST_OR_SSR"
+              onChange={[Function]}
+              onCompositionEnd={[Function]}
+              onCompositionStart={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onPaste={[Function]}
+              readOnly={false}
+              role="combobox"
+              style={
+                Object {
+                  "opacity": null,
+                }
+              }
+              type="search"
+              unselectable={null}
+              value=""
+            />
+          </span>
+          <span
+            className="ant-select-selection-placeholder"
+          >
+            Select a quote
+          </span>
+        </div>
+        <span
+          aria-hidden={true}
+          className="ant-select-arrow"
+          onMouseDown={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="on"
+        >
+          <span
+            aria-label="down"
+            className="anticon anticon-down ant-select-suffix"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="down"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <span
+        className="Header__votes"
+      >
+        Total Votes: 
+        0
+      </span>
+    </section>
+  </header>
+  <main>
+    <article
+      className="Homepage__errorContainer"
+    >
+      <span
+        aria-label="exclamation-circle"
+        className="anticon anticon-exclamation-circle Homepage__errorIcon"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          data-icon="exclamation-circle"
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          viewBox="64 64 896 896"
+          width="1em"
+        >
+          <path
+            d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+          />
+          <path
+            d="M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
+          />
+        </svg>
+      </span>
+      <details>
+        <summary>
+          An error has occurred
+        </summary>
+        <p>
+          Some Error
+        </p>
+      </details>
+    </article>
+  </main>
+</article>
+`;
+
+exports[`@quotes=[](3) @currentVote={id: "1", value: "a"} matches the snapshot 1`] = `
+<article
+  className="Homepage"
+>
+  <header
+    className="Header"
+  >
+    <section
+      className="Header__section"
+    >
+      <h3
+        className="Header__title"
+      >
+        Ron Swanson Voter
+      </h3>
+      <h4
+        className="Header__subtitle"
+      >
+        "Vote for your favorite quote!"
+      </h4>
+    </section>
+    <section
+      className="Header__section"
+    >
+      <div
+        className="TotalQuotesInputNumber"
+      >
+        <label
+          className="TotalQuotesInputNumber__label"
+          htmlFor="total-quotes-input-number"
+        >
+          Total Quotes
+        </label>
+        <div
+          className="ant-input-number ant-input-number-sm"
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        >
+          <div
+            className="ant-input-number-handler-wrap"
+          >
+            <span
+              aria-disabled={false}
+              aria-label="Increase Value"
+              className="ant-input-number-handler ant-input-number-handler-up"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="up"
+                className="anticon anticon-up ant-input-number-handler-up-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="up"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled={false}
+              aria-label="Decrease Value"
+              className="ant-input-number-handler ant-input-number-handler-down"
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              role="button"
+              unselectable="on"
+            >
+              <span
+                aria-label="down"
+                className="anticon anticon-down ant-input-number-handler-down-inner"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="down"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="ant-input-number-input-wrap"
+          >
+            <input
+              aria-valuemax={100}
+              aria-valuemin={2}
+              aria-valuenow="9"
+              autoComplete="off"
+              className="ant-input-number-input"
+              id="total-quotes-input-number"
+              onChange={[Function]}
+              role="spinbutton"
+              step={1}
+              value="9"
+            />
+          </div>
+        </div>
+      </div>
+      <fieldset
+        className="ThemeFieldset"
+      >
+        <label
+          className="ThemeFieldset__label"
+        >
+          Theme
+        </label>
+        <div
+          className="ant-radio-group ant-radio-group-outline"
+        >
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-light-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="light"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-light-input"
+          >
+            Light
+          </label>
+          <label
+            className="ant-radio-wrapper"
+          >
+            <span
+              className="ant-radio"
+              style={Object {}}
+            >
+              <input
+                checked={false}
+                className="ant-radio-input"
+                id="theme-dark-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyPress={[Function]}
+                onKeyUp={[Function]}
+                type="radio"
+                value="dark"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </label>
+          <label
+            className="ThemeFieldset__label"
+            htmlFor="theme-dark-input"
+          >
+            Dark
+          </label>
+        </div>
+      </fieldset>
+      <div
+        className="ant-select ant-select-sm QuoteSelect ant-select-single ant-select-allow-clear ant-select-show-arrow ant-select-show-search"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+      >
+        <div
+          className="ant-select-selector"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+        >
+          <span
+            className="ant-select-selection-search"
+          >
+            <input
+              aria-activedescendant="undefined_list_0"
+              aria-autocomplete="list"
+              aria-controls="undefined_list"
+              aria-haspopup="listbox"
+              aria-owns="undefined_list"
+              autoComplete="off"
+              className="ant-select-selection-search-input"
+              disabled={false}
+              onChange={[Function]}
+              onCompositionEnd={[Function]}
+              onCompositionStart={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onPaste={[Function]}
+              readOnly={false}
+              role="combobox"
+              style={
+                Object {
+                  "opacity": null,
+                }
+              }
+              type="search"
+              unselectable={null}
+              value=""
+            />
+          </span>
+          <span
+            className="ant-select-selection-placeholder"
+          >
+            Select a quote
+          </span>
+        </div>
+        <span
+          aria-hidden={true}
+          className="ant-select-arrow"
+          onMouseDown={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="on"
+        >
+          <span
+            aria-label="down"
+            className="anticon anticon-down ant-select-suffix"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="down"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <span
+        className="Header__votes"
+      >
+        Total Votes: 
+        0
+      </span>
+    </section>
+  </header>
+  <main>
+    <div
+      className="ant-list ant-list-split ant-list-bordered QuoteList"
+    >
+      <div
+        className="ant-spin-nested-loading"
+      >
+        <div
+          className="ant-spin-container"
+        >
+          <div
+            className="ant-list-empty-text"
+          >
+            <span
+              aria-label="question-circle"
+              className="anticon anticon-question-circle"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="question-circle"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                />
+              </svg>
+            </span>
+            <h3>
+              No Items Found
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</article>
+`;
+
+exports[`matches the snapshot 1`] = `
+<article
+  className="Homepage"
+>
+  <main>
+    <div
+      className="ant-list ant-list-split ant-list-bordered QuoteList"
+    >
+      <div
+        className="ant-spin-nested-loading"
+      >
+        <div
+          className="ant-spin-container"
+        >
+          <div
+            className="ant-list-empty-text"
+          >
+            <span
+              aria-label="question-circle"
+              className="anticon anticon-question-circle"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="question-circle"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z"
+                />
+              </svg>
+            </span>
+            <h3>
+              No Items Found
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</article>
+`;

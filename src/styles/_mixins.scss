@@ -1,0 +1,121 @@
+@import 'vars';
+
+@mixin var($property, $varName) {
+  #{$property}: map-get($vars, $varName);
+  #{$property}: var(--#{$varName});
+}
+
+@mixin set-var($varName, $valueName) {
+  --#{$varName}: #{map-get($vars, $valueName)};
+}
+
+@function get-var($varName) {
+  @return map-get($vars, $varName);
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($size-value: 16) {
+  $size-value: strip-unit($size-value);
+  @return ($size-value / strip-unit(get-var(base-font-size))) + rem;
+}
+
+@mixin base-text-content {
+  font-style: normal;
+  font-weight: normal;
+  @include var(font-family, font-family-segoe-ui);
+  @include var(color, primary-text-color);
+}
+
+@mixin text-content-1 {
+  @include base-text-content;
+  font-size: rem(32px);
+  line-height: rem(38px);
+}
+
+@mixin text-content-2 {
+  @include base-text-content;
+  font-size: rem(24px);
+  line-height: rem(28px);
+}
+
+@mixin text-content-3 {
+  @include base-text-content;
+  font-size: rem(18px);
+  line-height: rem(22px);
+}
+
+@mixin text-content-4 {
+  @include base-text-content;
+  font-size: rem(16px);
+  line-height: rem(18px);
+}
+
+@mixin text-content-5 {
+  @include base-text-content;
+  font-size: rem(13px);
+  line-height: rem(16px);
+}
+
+@mixin text-content-6 {
+  @include base-text-content;
+  font-size: rem(11px);
+  line-height: rem(12px);
+}
+
+
+@mixin screen-size-and-up($min-width) {
+  @media (min-width: $min-width) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-portrait-0-and-up {
+  @include screen-size-and-up(get-var(mobile-portrait-0)) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait-1-and-up {
+  @include screen-size-and-up(get-var(mobile-portrait-1)) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait-2-and-up {
+  @include screen-size-and-up(get-var(mobile-portrait-2)) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-0-and-up {
+  @include screen-size-and-up(get-var(tablet-portrait-0)) {
+    @content;
+  }
+}
+
+@mixin desktop-0-and-up {
+  @include screen-size-and-up(get-var(desktop-0)) {
+    @content;
+  }
+}
+
+@mixin desktop-1-and-up {
+  @include screen-size-and-up(get-var(desktop-1)) {
+    @content;
+  }
+}
+
+@mixin desktop-2-and-up {
+  @include screen-size-and-up(get-var(desktop-2)) {
+    @content;
+  }
+}

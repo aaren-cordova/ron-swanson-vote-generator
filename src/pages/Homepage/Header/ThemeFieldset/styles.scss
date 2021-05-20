@@ -1,0 +1,16 @@
+@import 'styles/module';
+
+.ThemeFieldset {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ThemeFieldset__label {
+  margin-right: rem(8px);
+
+  &:first-child::after {
+    content: ":";
+  }
+}

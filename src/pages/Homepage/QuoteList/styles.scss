@@ -1,0 +1,13 @@
+@import 'styles/module';
+
+.ant-list.QuoteList {
+  .ant-list-empty-text{
+    display: flex;
+    flex-direction: column;
+    padding: rem(16px);
+  }
+
+  .anticon.anticon-question-circle {
+    font-size: 100px;
+  }
+}

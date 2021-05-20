@@ -1,0 +1,15 @@
+@import 'styles/module';
+
+.TotalQuotesInputNumber {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.TotalQuotesInputNumber__label {
+  margin-right: rem(8px);
+
+  &:first-child::after {
+    content: ":";
+  }
+}
