@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@theme="dark" matches the snapshot 1`] = `
+<fieldset
+  className="ThemeFieldset"
+>
+  <label
+    className="ThemeFieldset__label"
+  >
+    Theme
+  </label>
+  <div
+    className="ant-radio-group ant-radio-group-outline"
+  >
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          id="theme-light-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="light"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-light-input"
+    >
+      Light
+    </label>
+    <label
+      className="ant-radio-wrapper ant-radio-wrapper-checked"
+    >
+      <span
+        className="ant-radio ant-radio-checked"
+        style={Object {}}
+      >
+        <input
+          checked={true}
+          className="ant-radio-input"
+          id="theme-dark-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="dark"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-dark-input"
+    >
+      Dark
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`@theme="light" matches the snapshot 1`] = `
+<fieldset
+  className="ThemeFieldset"
+>
+  <label
+    className="ThemeFieldset__label"
+  >
+    Theme
+  </label>
+  <div
+    className="ant-radio-group ant-radio-group-outline"
+  >
+    <label
+      className="ant-radio-wrapper ant-radio-wrapper-checked"
+    >
+      <span
+        className="ant-radio ant-radio-checked"
+        style={Object {}}
+      >
+        <input
+          checked={true}
+          className="ant-radio-input"
+          id="theme-light-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="light"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-light-input"
+    >
+      Light
+    </label>
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          id="theme-dark-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="dark"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-dark-input"
+    >
+      Dark
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`matches the snapshot 1`] = `
+<fieldset
+  className="ThemeFieldset"
+>
+  <label
+    className="ThemeFieldset__label"
+  >
+    Theme
+  </label>
+  <div
+    className="ant-radio-group ant-radio-group-outline"
+  >
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          id="theme-light-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="light"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-light-input"
+    >
+      Light
+    </label>
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          id="theme-dark-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyPress={[Function]}
+          onKeyUp={[Function]}
+          type="radio"
+          value="dark"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ThemeFieldset__label"
+      htmlFor="theme-dark-input"
+    >
+      Dark
+    </label>
+  </div>
+</fieldset>
+`;
