@@ -11,10 +11,8 @@ export default function Header(
         quotes,
         theme,
         setTheme,
-        setFilteredQuotes,
         totalQuotes,
         setTotalQuotes,
-        searchTerm,
         setSearchTerm,
     },
 ) {
@@ -41,8 +39,6 @@ export default function Header(
                 />
                 <QuoteSelect
                     quotes={quotes}
-                    setFilteredQuotes={setFilteredQuotes}
-                    searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
                 />
 

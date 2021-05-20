@@ -1,5 +1,6 @@
 import {InputNumber} from 'antd';
 import classNames from 'classnames';
+import './styles.scss';
 
 export default function TotalQuotesInputNumber({className, totalQuotes, setTotalQuotes}) {
     function handleTotalQuotesChange(totalQuotes) {
@@ -7,17 +8,22 @@ export default function TotalQuotesInputNumber({className, totalQuotes, setTotal
     }
 
     return (
-        <>
-            <label htmlFor="total-quotes-input-number"/>
+        <div className={classNames('TotalQuotesInputNumber', className)}>
+            <label
+                className="TotalQuotesInputNumber__label"
+                htmlFor="total-quotes-input-number"
+            >
+                Total Quotes
+            </label>
             <InputNumber
                 id="total-quotes-input-number"
-                className={classNames('TotalQuotesInputNumber', className)}
                 onChange={handleTotalQuotesChange}
-                min={totalQuotes}
+                size={'small'}
+                min={2}
                 max={100}
                 step={1}
                 value={totalQuotes}
             />
-        </>
+        </div>
     );
 }

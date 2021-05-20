@@ -4,8 +4,11 @@ import {useState, useEffect} from 'react';
 import Storages from 'js-storage';
 import classNames from 'classnames';
 import 'antd/dist/antd.css';
-import md5 from 'md5';
 import QuoteList from './QuoteList';
+import {ExclamationCircleOutlined, QuestionCircleOutlined} from '@ant-design/icons';
+import compareQuotes from './Header/QuoteSelect/compareQuotes';
+import fetchQuotes from './apis/fetchQuotes';
+import {ERROR, STARTED, SUCCESS, UNSENT} from './constatns';
 
 const storageNameSpaces = {'default-name': Storages};
 
@@ -21,40 +24,12 @@ function getStorage(name) {
     return sessionStorage || localStorage || cookieStorage || null;
 }
 
-async function fetchQuotes({quotes, totalQuotes}) {
-    const currentQuoteIds = {};
-    quotes.forEach(({id}) => {
-        currentQuoteIds[id] = true;
-    });
-
-    const numQuotesToLoad = totalQuotes - quotes.length;
-    const response = await fetch(`//ron-swanson-quotes.herokuapp.com/v2/quotes/${numQuotesToLoad}`);
-    let newQuotes = await response.json();
-
-    newQuotes = newQuotes
-        .map((label) => {
-            return { // Fake data, this should be stored in the API endpoint instead.  Here for testing purposes
-                value: md5(label),
-                label,
-                yesVotes: Math.floor(Math.random() * 10),
-                noVotes: Math.floor(Math.random() * 10),
-            };
-        })
-        .filter(({id}) => {
-            return !currentQuoteIds[id];
-        });
-
-    quotes = quotes.concat(newQuotes);
-    if (totalQuotes !== quotes.length) {
-        quotes = await fetchQuotes({quotes, totalQuotes});
-    }
-
-    return quotes;
-}
 
 export default function App() {
     const storage = getStorage(`ron-swanson-quote-generator-v${process.env.REACT_APP_VERSION}-4`);
-    const [totalQuotes, setTotalQuotes] = useState(storage && !storage.isEmpty('totalQuotes') ? storage.get('totalQuotes') : 2);
+    const [hasLoadedFromCache, setLoadedFromCache] = useState(false);
+    const [loadState, setLoadState] = useState(UNSENT);
+    const [totalQuotes, setTotalQuotes] = useState(2);
     const [theme, setTheme] = useState('light');
     const [searchTerm, setSearchTerm] = useState('');
     const [quotes, setQuotes] = useState([]);
@@ -63,66 +38,112 @@ export default function App() {
     const [currentVote, setCurrentVote] = useState({id: '', value: ''});
 
     useEffect(() => {
-        if (error) {
+        if (!storage || hasLoadedFromCache) {
             return;
         }
 
-        if (!quotes.length && storage && !storage.isEmpty('quotes')) {
+        if (!quotes.length && !storage.isEmpty('quotes')) {
             const quotes = storage.get('quotes');
             setQuotes(quotes);
-            setFilteredQuotes(quotes);
             setTotalQuotes(quotes.length);
+        }
+
+        if (!storage.isEmpty('totalQuotes')) {
+            setTotalQuotes(storage.get('totalQuotes'));
+        }
+
+        if (!storage.isEmpty('theme')) {
+            setTheme(storage.get('theme'));
+        }
+
+        setLoadedFromCache(true);
+    }, [storage]);
+
+    useEffect(() => {
+        if (!searchTerm) {
+            setFilteredQuotes(quotes);
             return;
         }
 
-        if (quotes.length < totalQuotes) {
-            setSearchTerm('');
+        let filteredQuotes = quotes.filter((optionB) => {
+            return compareQuotes({label: searchTerm}, optionB);
+        });
+
+        if (filteredQuotes.length > totalQuotes) {
+            filteredQuotes = filteredQuotes.slice(0, totalQuotes);
+        }
+        setFilteredQuotes(filteredQuotes);
+    }, [searchTerm, quotes, totalQuotes]);
+
+
+    useEffect(() => {
+        if (error) {
+            if (storage) {
+                storage.set('quotes', []);
+            }
+            return;
+        }
+
+        if (!hasLoadedFromCache) {
+            return;
+        }
+
+        if (quotes.length < totalQuotes && loadState !== STARTED) {
+            setLoadState(STARTED);
 
             fetchQuotes({quotes, totalQuotes})
                 .then((response) => {
                     setQuotes(response);
-                    setFilteredQuotes(response);
-
-                    if (storage) {
-                        storage.set('quotes', response);
-                    }
+                    setLoadState(SUCCESS);
                 })
-                .catch(setError);
+                .catch((error) => {
+                    setError(error);
+                    setLoadState(ERROR);
+                });
             return;
         }
 
-        if (filteredQuotes.length > totalQuotes) {
-            setFilteredQuotes(filteredQuotes.slice(0, totalQuotes));
-            return;
-        }
+        hasLoadedFromCache && storage.set('totalQuotes', totalQuotes);
+        hasLoadedFromCache && storage.set('theme', theme);
+        hasLoadedFromCache && storage.set('quotes', quotes);
+        hasLoadedFromCache && storage.set('searchTerm', searchTerm);
 
-        if (storage) {
-            storage.set('totalQuotes', totalQuotes);
-            return;
-        }
-
-    }, [totalQuotes, quotes]);
+    }, [hasLoadedFromCache, theme, totalQuotes, quotes, searchTerm]);
 
 
     const isLightTheme = theme === 'light';
     return (
         <div className={classNames('App', {'theme--light': isLightTheme, 'theme--dark': !isLightTheme})}>
-            <Header
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                theme={theme}
-                setTheme={setTheme}
-                quotes={quotes}
-                setFilteredQuotes={setFilteredQuotes}
-                totalQuotes={totalQuotes}
-                setTotalQuotes={setTotalQuotes}
-            />
-            <main>
-                <QuoteList
-                    quotes={filteredQuotes}
-                    setCurrentVote={setCurrentVote}
-                    currentVote={currentVote}
+            {
+                hasLoadedFromCache &&
+                <Header
+                    setSearchTerm={setSearchTerm}
+                    theme={theme}
+                    setTheme={setTheme}
+                    quotes={quotes}
+                    totalQuotes={totalQuotes}
+                    setTotalQuotes={setTotalQuotes}
                 />
+            }
+            <main>
+                {
+                    !error &&
+                    <QuoteList
+                        quotes={filteredQuotes}
+                        setCurrentVote={setCurrentVote}
+                        currentVote={currentVote}
+                    />
+                }
+                {
+                    error &&
+                    <article className="App__errorContainer">
+                        <ExclamationCircleOutlined className={'App__errorIcon'}/>
+                        <details>
+                            <summary>An error has occurred</summary>
+                            <p>{error.message || error}</p>
+                        </details>
+                    </article>
+                }
             </main>
         </div>
     );

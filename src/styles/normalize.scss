@@ -1,0 +1,40 @@
+@import 'styles/module';
+
+pre,
+code,
+button,
+input,
+optgroup,
+select,
+textarea,
+a, {
+  @include text-content-4;
+}
+
+h1 {
+  @include text-content-1;
+}
+
+h2 {
+  @include text-content-2;
+}
+
+h3 {
+  @include text-content-3;
+}
+
+h4 {
+  @include text-content-4;
+}
+
+h5 {
+  @include text-content-5;
+}
+
+h6 {
+  @include text-content-6;
+}
+
+.anticon {
+  @include var(color, primary-text-color);
+}

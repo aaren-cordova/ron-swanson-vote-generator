@@ -17,7 +17,7 @@ export default function ThemeFieldset({className, theme, setTheme}) {
                 id="theme-light-input"
                 name="theme"
                 value="light"
-                defaultChecked={theme === 'light'}
+                checked={theme === 'light'}
             />
             <label
                 className="ThemeFieldset__label"
@@ -30,7 +30,7 @@ export default function ThemeFieldset({className, theme, setTheme}) {
                 id="theme-dark-input"
                 name="theme"
                 value="dark"
-                defaultChecked={theme === 'dark'}
+                checked={theme === 'dark'}
             />
             <label
                 className="ThemeFieldset__label"

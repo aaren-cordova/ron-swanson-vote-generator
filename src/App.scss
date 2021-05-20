@@ -1,5 +1,5 @@
 @import 'styles/module';
-@import '~normalize.css';
+@import 'styles/normalize';
 
 :root {
   @include text-content-4;
@@ -8,6 +8,7 @@
     --#{$name}: #{$value};
   }
 }
+
 
 
 .App {
@@ -36,28 +37,14 @@
     @include set-var(primary-text-color, grey-2);
     @include set-var(primary-border-color, dark-0);
   }
+}
 
-  h1 {
-    @include text-content-1;
-  }
+.App__errorContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: rem(18 ppx);
+}
 
-  h2 {
-    @include text-content-2;
-  }
-
-  h3 {
-    @include text-content-3;
-  }
-
-  h4 {
-    @include text-content-4;
-  }
-
-  h5 {
-    @include text-content-5;
-  }
-
-  h6 {
-    @include text-content-6;
-  }
+.App__errorIcon {
+  font-size: rem(100 ppx);
 }

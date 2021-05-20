@@ -1,0 +1,18 @@
+@import 'styles/module';
+
+.ant-list-item.QuoteListItem {
+  display: flex;
+  justify-content: flex-start;
+  @include var(color, primary-text-color);
+
+  .anticon {
+    @include var(color, light-5);
+  }
+}
+
+.QuoteListItem__votesContainer {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
